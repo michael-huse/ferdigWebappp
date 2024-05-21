@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Et skjema</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="endreKunde.js"></script>
+    <script src="validering.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <h1>Se kunder</h1>
+
+<form class="form">
+    <!-- Hidden Field for Customer ID -->
+    <input type="hidden" id="id"/>
+
+    <!-- Name Input Field with Validation -->
+    <div class="form-group">
+        <label>Navn</label>
+        <input type="text" id="navn" onchange="validerNavn(this.value)"/>
+        <span id="feilNavn" style="color: red"></span>
+    </div>
+    <!-- Address Input Field with Validation -->
+    <div class="form-group">
+        <label>Adresse</label>
+        <input type="text" id="adresse" onchange="validerAdresse(this.value)"/>
+        <span id="feilAdresse" style="color:red"></span>
+    </div>
+    <!-- Password Input Field with Validation -->
+    <div class="form-group">
+        <label>Passord</label>
+        <input type="text" id="passord" onchange="validerPassord(this.value)"/>
+        <span id="feilPassord" style="color:red"></span>
+    </div>
+
+    <!-- Submit Button with Validation -->
+    <div class="form-group">
+        <input type="button" id="reg" value="Endre" class="btn btn-primary" onclick="validerOgEndreKunden()"/>
+    </div>
+    <!-- General Error Message Placeholder -->
+    <div id="feil" style="color: red"></div>
+</form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tidligere biletter</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script src="lagredeBiletter.js"></script>
+
+</head>
+<body>
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Navbar header with brand link -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="billettRegistrering.html">Kino</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="billettRegistrering.html">bestill biletter</a></li>
+      <li class="active"><a href="lagredeBiletter.html">Bilettregister</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="endreKunde.html">Se kunder</a></li>
+      <li><a href="lagreKunde.html">Lagre kunde</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- Main container for the page content -->
+
+<div class="container">
+  <h3>Alle biletter:</h3>
+  <!-- Div to display the tickets -->
+  <div id="biletter"></div>
+  <div id="feil" style="color: red"></div>
+  <!-- Button to delete all tickets, triggers the slettAlle() function -->
+  <button class="btn btn-danger" onclick="slettAlle()">Slett alle tidligere biletter</button>
+
+</div>
+</body>
+</html>

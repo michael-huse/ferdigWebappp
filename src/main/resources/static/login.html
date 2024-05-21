@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Et skjema</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/2.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="login.js"></script>
+    <script src="validering.js"></script>
+</head>
+<body>
+
+
+<h1>Login </h1>
+<form class="form">
+    <!-- Form group for username input -->
+    <div class="form-group">
+        <label>Navn</label>
+        <input type="text" id="navn" onchange="validerNavn(this.value)"/>
+        <!-- Placeholder for validation error messages for the username -->
+        <span id="feilNavn" style="color: red"></span>
+    </div>
+    <div class="form-group">
+        <label>Passord</label>
+        <input type="text" id="passord" onchange="validerPassord(this.value)"/>
+        <span id="feilPassord" style="color:red"></span>
+    </div>
+
+    <!-- Form group for buttons -->
+    <div class="form-group">
+        <!-- Button to trigger the login function -->
+        <input type="button" id="reg" value="Logg inn" onClick="validerOgLogin()" class="btn btn-primary"/>
+        <!-- Link to the ticket registration page -->
+        <a href="billettRegistrering.html" class="btn btn-primary">Til kundelisten</a>
+    </div>
+    <!-- Placeholder for general error messages -->
+    <div id="feil" style="color: red"></div>
+</form>
+</body>
+</html>
